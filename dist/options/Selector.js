@@ -41,7 +41,7 @@ var Selector = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
-    Selector.prototype.componentWillMount = function () {
+    Selector.prototype.componentDidMount = function () {
         var _a = this.props, option = _a.option, defaultOption = _a.defaultOption;
         var optionContext = this.optionContext;
         var defaultValue = (typeof defaultOption === 'string' ?
@@ -54,7 +54,7 @@ var Selector = /** @class */ (function (_super) {
             optionContext.setDefaultValue(option.key, defaultValue);
         }
     };
-    Selector.prototype.componentWillUpdate = function (nextProps) {
+    Selector.prototype.componentDidUpdate = function (nextProps) {
         this.updateOptionValues(nextProps);
     };
     Selector.prototype.componentWillUnmount = function () {
@@ -77,9 +77,9 @@ var Selector = /** @class */ (function (_super) {
             return;
         }
         var _a = this.props, option = _a.option, children = _a.children;
-        var values = React.Children.map(children, 
-        // TODO: also validate and throw error if we don't see optionValue
-        function (child) { return getComponentOptionValue(child.type); });
+        var values = React.Children.map(children,
+            // TODO: also validate and throw error if we don't see optionValue
+            function (child) { return getComponentOptionValue(child.type); });
         if (new Set(values).size !== values.length) {
             throw new Error('Duplicate values');
         }
