@@ -12,19 +12,19 @@
   "author": "Fang-Pen Lin <hello@fangpenlin.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "@types/react": "^16.0.25",
-    "import-sort-style-renke": "^4.2.0",
+    "@types/react": "^17.0.3",
+    "import-sort-style-renke": "^6.0.0",
     "tslint": "^5.8.0",
     "tslint-config-standard": "^7.0.0",
     "tslint-react": "^3.2.0",
     "typescript": "^2.6.2"
   },
   "dependencies": {
-    "lodash": ">=4.17.11",
-    "prop-types": "^15.6.0"
+    "lodash": ">=4.17.21",
+    "prop-types": "^15.7.2"
   },
   "importSort": {
     ".js, .jsx, .es6, .es": {
